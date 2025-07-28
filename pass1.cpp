@@ -309,7 +309,7 @@ int main()
 			else
 			{
 				string c(1, op1[1]);
-				IC += "(C," + c + ")";
+				IC += "(C," + c + ")    NAN";
 				LC++;
 			}
 		}
@@ -329,7 +329,7 @@ int main()
 				{
 					if(presentST(op1))
 					{
-						IC += "(S,0" + to_string(ST[getSymID(op1)].no) + ")";
+						IC += "(S,0" + to_string(ST[getSymID(op1)].no) + ")    NAN";
 						lc = to_string(LC);
 						LC++;
 					}
@@ -338,7 +338,7 @@ int main()
 						ST[scnt].no = scnt + 1;
 						ST[scnt].sname = op1;
 						scnt++;
-						IC += "(S,0" + to_string(ST[getSymID(op1)].no) + ")";
+						IC += "(S,0" + to_string(ST[getSymID(op1)].no) + ")    NAN";
 						lc = to_string(LC);
 						LC++;
 					}
